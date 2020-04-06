@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_i_pololu" kind="class"><name>IPololu</name>
+    <member refid="class_i_pololu_1ad3fff4d5d504c9043f1f0c7a8b819bf9" kind="function"><name>setTarget</name></member>
+    <member refid="class_i_pololu_1a6b68c173f6b6ff1cbc708ae8cb93585a" kind="function"><name>setMultipleTargets</name></member>
+    <member refid="class_i_pololu_1aac8427d535a0b22a42c84e428850dba1" kind="function"><name>setSpeed</name></member>
+    <member refid="class_i_pololu_1a16f17d791b4b690c50dee87872ac3088" kind="function"><name>getPosition</name></member>
+    <member refid="class_i_pololu_1ac579928e656e67c6b696a49e42d7e6e0" kind="function"><name>getmovingstate</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_i_pololu_8cpp" kind="file"><name>IPololu.cpp</name>
+  </compound>
+  <compound refid="_i_serial_com_8cpp" kind="file"><name>ISerialCom.cpp</name>
+    <member refid="_i_serial_com_8cpp_1ae6e17652a3c4267114719964041952bb" kind="function"><name>openPort</name></member>
+    <member refid="_i_serial_com_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+</doxygenindex>

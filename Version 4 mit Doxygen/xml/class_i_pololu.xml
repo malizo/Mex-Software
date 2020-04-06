@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_i_pololu" kind="class" language="C++" prot="public">
+    <compoundname>IPololu</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_pololu_1ad3fff4d5d504c9043f1f0c7a8b819bf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char IPololu::setTarget</definition>
+        <argsstring>(HANDLE port, unsigned char channel, unsigned short target)</argsstring>
+        <name>setTarget</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Positions Setzfunktion </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Position die angefahren werden in ganzzahligen Ticks angegeben meistens von 1000-8000</para>
+<para>Hersteller Protokollwert</para>
+<para>Servonummer die angesprochen werden soll</para>
+<para>Befehluebergabe zur Einstellung der Position</para>
+        </inbodydescription>
+        <location file="IPololu.cpp" line="8" column="15" bodyfile="IPololu.cpp" bodystart="8" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_pololu_1a6b68c173f6b6ff1cbc708ae8cb93585a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char IPololu::setMultipleTargets</definition>
+        <argsstring>(HANDLE port, unsigned char numberoftargets, unsigned char channel, unsigned short target)</argsstring>
+        <name>setMultipleTargets</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>numberoftargets</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Einstellung von mehreren Servos gleichzeitig </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Hersteller Protokollwert</para>
+<para>Anzahl der anzusprechen Servos/Ziele ; Ganzzahlige int übergabe</para>
+<para>Servonummer die angesprochen werden soll ;</para>
+<para>uebergabe der Position wie in der Settarget Funktion in Ticks</para>
+<para>Befehlübergabe zur Einstellung mehrerer Positionen auf mehreren Servos</para>
+        </inbodydescription>
+        <location file="IPololu.cpp" line="22" column="15" bodyfile="IPololu.cpp" bodystart="22" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_pololu_1aac8427d535a0b22a42c84e428850dba1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char IPololu::setSpeed</definition>
+        <argsstring>(HANDLE port, unsigned char channel, unsigned short speed)</argsstring>
+        <name>setSpeed</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Geschwindigkeiteinstellung </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Hersteller Protokollwert</para>
+<para>Servonummer die angesprochen werden soll</para>
+<para>uebergabe der Geschwindigkeit in (0,25us/10ms) ; Ein guter Wert hierfür waere 10 ; Wenn die Zahl 0 hier übergeben wird bedeutet dies das der Servo die Maximal Geschwindigkeit benutzt; 1 entspricht dem kleinsten Wert</para>
+        </inbodydescription>
+        <location file="IPololu.cpp" line="34" column="15" bodyfile="IPololu.cpp" bodystart="34" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_pololu_1a16f17d791b4b690c50dee87872ac3088" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char IPololu::getPosition</definition>
+        <argsstring>(HANDLE port, unsigned char channel, unsigned int *position)</argsstring>
+        <name>getPosition</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Positions Rueckgabe Zugriff auf den Inhalt der Position </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Uebergabe</para>
+<para>Hersteller Protokollwert</para>
+<para>Servonummer die angesprochen werden soll</para>
+<para>Befehluebergabe zur Positionsbestimmung</para>
+<para>umrechnung der Position von Byte auf Ticks</para>
+        </inbodydescription>
+        <location file="IPololu.cpp" line="47" column="15" bodyfile="IPololu.cpp" bodystart="47" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_pololu_1ac579928e656e67c6b696a49e42d7e6e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char IPololu::getmovingstate</definition>
+        <argsstring>(HANDLE port)</argsstring>
+        <name>getmovingstate</name>
+        <param>
+          <type>HANDLE</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bewegungsbestimmung </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Hersteller Protokollwert</para>
+<para>Befehluebergabe zur Bewegungsbestimmung</para>
+<para>Rueckgabewert 1 wenn dieser sich noch bewegt</para>
+        </inbodydescription>
+        <location file="IPololu.cpp" line="68" column="15" bodyfile="IPololu.cpp" bodystart="68" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="IPololu.cpp" line="5" column="14" bodyfile="IPololu.cpp" bodystart="5" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_i_pololu_1ac579928e656e67c6b696a49e42d7e6e0" prot="public" virt="non-virtual"><scope>IPololu</scope><name>getmovingstate</name></member>
+      <member refid="class_i_pololu_1a16f17d791b4b690c50dee87872ac3088" prot="public" virt="non-virtual"><scope>IPololu</scope><name>getPosition</name></member>
+      <member refid="class_i_pololu_1a6b68c173f6b6ff1cbc708ae8cb93585a" prot="public" virt="non-virtual"><scope>IPololu</scope><name>setMultipleTargets</name></member>
+      <member refid="class_i_pololu_1aac8427d535a0b22a42c84e428850dba1" prot="public" virt="non-virtual"><scope>IPololu</scope><name>setSpeed</name></member>
+      <member refid="class_i_pololu_1ad3fff4d5d504c9043f1f0c7a8b819bf9" prot="public" virt="non-virtual"><scope>IPololu</scope><name>setTarget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
