@@ -1,0 +1,4 @@
+﻿  ISerialCom.cpp
+C:\Users\mlizo\OneDrive\Desktop\Polulu\Polulu_v2\ISerialCom.cpp(69,32): warning C4101: "state": Unreferenzierte lokale Variable
+C:\Users\mlizo\OneDrive\Desktop\Polulu\Polulu_v2\ISerialCom.cpp(68,7): warning C4101: "success": Unreferenzierte lokale Variable
+  Polulu.vcxproj -> C:\Users\mlizo\OneDrive\Desktop\Polulu\Polulu_v2\Debug\Polulu.exe

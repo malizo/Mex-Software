@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_i_serial_com_8cpp" kind="file" language="C++">
+    <compoundname>ISerialCom.cpp</compoundname>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="_i_pololu_8cpp" local="yes">IPololu.cpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">time.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>IPololu.cpp</label>
+        <link refid="_i_pololu_8cpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>windows.h</label>
+      </node>
+      <node id="6">
+        <label>Windows.h</label>
+      </node>
+      <node id="2">
+        <label>fcntl.h</label>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>ISerialCom.cpp</label>
+        <link refid="_i_serial_com_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_i_serial_com_8cpp_1ae6e17652a3c4267114719964041952bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HANDLE</type>
+        <definition>HANDLE openPort</definition>
+        <argsstring>(const char *portName, unsigned int baudRate)</argsstring>
+        <name>openPort</name>
+        <param>
+          <type>const char *</type>
+          <declname>portName</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>baudRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open Port Funktion zum Aufbau eines Seriellen Ports </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Open the serial port.</para>
+<para>Set the baud rate.</para>
+<para>Flush out any bytes received from the device earlier.</para>
+        </inbodydescription>
+        <location file="ISerialCom.cpp" line="9" column="8" bodyfile="ISerialCom.cpp" bodystart="9" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="_i_serial_com_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MainFunktion Testausführung der Funktionen </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Test der Funktionen</para>
+<para>Portname ;Der Portname muss nach dem jeweiligen Anschluss geändert werden</para>
+<para>Choose the baud rate (bits per second).</para>
+<para>Getfunktion auf dem Channel 0 mit den Zugriff auf die Position</para>
+<para>Motionen bestätigung</para>
+<para>Ausgabe der Position</para>
+<para>Speed wird in (0,25us/10ms) 0 entspricht unlimitiert</para>
+<para>Setfunktionen auf dem Channel 0 mit der Position 2000</para>
+<para>Setfunktionen auf dem Channel 0 mit der Position 5000</para>
+        </inbodydescription>
+        <location file="ISerialCom.cpp" line="64" column="5" bodyfile="ISerialCom.cpp" bodystart="64" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_pololu_8cpp" kindref="compound">IPololu.cpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/**<sp/>Open<sp/>Port<sp/>Funktion<sp/>zum<sp/>Aufbau<sp/>eines<sp/>Seriellen<sp/>Ports*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="_i_serial_com_8cpp_1ae6e17652a3c4267114719964041952bb" refkind="member"><highlight class="normal">HANDLE<sp/><ref refid="_i_serial_com_8cpp_1ae6e17652a3c4267114719964041952bb" kindref="member">openPort</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>portName,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baudRate)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/>port;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>DCB<sp/>commState;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/>success;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>Open<sp/>the<sp/>serial<sp/>port.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>port<sp/>=<sp/>CreateFileA(portName,<sp/>GENERIC_READ<sp/>|<sp/>GENERIC_WRITE,<sp/>0,<sp/>NULL,<sp/>OPEN_EXISTING,<sp/>FILE_ATTRIBUTE_NORMAL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(port<sp/>==<sp/>INVALID_HANDLE_VALUE)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(GetLastError())</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ERROR_ACCESS_DENIED:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Access<sp/>denied.<sp/><sp/>Try<sp/>closing<sp/>all<sp/>other<sp/>programs<sp/>that<sp/>are<sp/>using<sp/>the<sp/>device.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ERROR_FILE_NOT_FOUND:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Serial<sp/>port<sp/>not<sp/>found.<sp/><sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Make<sp/>sure<sp/>that<sp/>\&quot;%s\&quot;<sp/>is<sp/>the<sp/>right<sp/>port<sp/>name.<sp/><sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Try<sp/>closing<sp/>all<sp/>programs<sp/>using<sp/>the<sp/>device<sp/>and<sp/>unplugging<sp/>the<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;device,<sp/>or<sp/>try<sp/>rebooting.\n&quot;</highlight><highlight class="normal">,<sp/>portName);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>open<sp/>serial<sp/>port.<sp/><sp/>Error<sp/>code<sp/>0x%x.\n&quot;</highlight><highlight class="normal">,<sp/>GetLastError());</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INVALID_HANDLE_VALUE;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>Set<sp/>the<sp/>baud<sp/>rate.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>success<sp/>=<sp/>GetCommState(port,<sp/>&amp;commState);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!success)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>get<sp/>comm<sp/>state.<sp/><sp/>Error<sp/>code<sp/>0x%x.\n&quot;</highlight><highlight class="normal">,<sp/>GetLastError());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CloseHandle(port);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INVALID_HANDLE_VALUE;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>commState.BaudRate<sp/>=<sp/>baudRate;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>success<sp/>=<sp/>SetCommState(port,<sp/>&amp;commState);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!success)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>set<sp/>comm<sp/>state.<sp/><sp/>Error<sp/>code<sp/>0x%x.\n&quot;</highlight><highlight class="normal">,<sp/>GetLastError());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CloseHandle(port);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INVALID_HANDLE_VALUE;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>Flush<sp/>out<sp/>any<sp/>bytes<sp/>received<sp/>from<sp/>the<sp/>device<sp/>earlier.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>success<sp/>=<sp/>FlushFileBuffers(port);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!success)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>flush<sp/>port<sp/>buffers.<sp/><sp/>Error<sp/>code<sp/>0x%x.\n&quot;</highlight><highlight class="normal">,<sp/>GetLastError());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CloseHandle(port);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INVALID_HANDLE_VALUE;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>port;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="63"><highlight class="comment">/**<sp/>MainFunktion<sp/>Testausführung<sp/>der<sp/>Funktionen<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_i_serial_com_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_i_serial_com_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref><sp/>(){</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/>port;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>portName;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baudRate;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/>success;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>target,<sp/>position,state;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_pololu" kindref="compound">IPololu</ref><sp/>Roboter;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>Test<sp/>der<sp/>Funktionen*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Test&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>portName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;COM4&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">/**Portname<sp/>;Der<sp/>Portname<sp/>muss<sp/>nach<sp/>dem<sp/>jeweiligen<sp/>Anschluss<sp/>geändert<sp/>werden*/</highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/>/**<sp/>Choose<sp/>the<sp/>baud<sp/>rate<sp/>(bits<sp/>per<sp/>second).*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>baudRate<sp/>=<sp/>9600;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Open<sp/>the<sp/>Maestro&apos;s<sp/>serial<sp/>port.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>port<sp/>=<sp/><ref refid="_i_serial_com_8cpp_1ae6e17652a3c4267114719964041952bb" kindref="member">openPort</ref>(portName,<sp/>baudRate);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(port<sp/>==<sp/>INVALID_HANDLE_VALUE)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Test<sp/>Funktionen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>Roboter.<ref refid="class_i_pololu_1a16f17d791b4b690c50dee87872ac3088" kindref="member">getPosition</ref>(port,<sp/>0,<sp/>&amp;position);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**Getfunktion<sp/>auf<sp/>dem<sp/>Channel<sp/>0<sp/>mit<sp/>den<sp/>Zugriff<sp/>auf<sp/>die<sp/>Position*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>Roboter.<ref refid="class_i_pololu_1ac579928e656e67c6b696a49e42d7e6e0" kindref="member">getmovingstate</ref>(port);<sp/><sp/><sp/></highlight><highlight class="comment">/**Motionen<sp/>bestätigung<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>position&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**Ausgabe<sp/>der<sp/>Position*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>target<sp/>=<sp/>(position<sp/>&lt;<sp/>6000)<sp/>?<sp/>7000<sp/>:<sp/>5000;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>Roboter.<ref refid="class_i_pololu_1aac8427d535a0b22a42c84e428850dba1" kindref="member">setSpeed</ref>(port,<sp/>0,<sp/>2);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**Speed<sp/>wird<sp/>in<sp/>(0,25us/10ms)<sp/>0<sp/>entspricht<sp/>unlimitiert*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>Roboter.<ref refid="class_i_pololu_1ad3fff4d5d504c9043f1f0c7a8b819bf9" kindref="member">setTarget</ref>(port,<sp/>0,<sp/>2000);<sp/><sp/><sp/></highlight><highlight class="comment">/**Setfunktionen<sp/>auf<sp/>dem<sp/>Channel<sp/>0<sp/>mit<sp/>der<sp/>Position<sp/>2000*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>Sleep(1000);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>Roboter.<ref refid="class_i_pololu_1ad3fff4d5d504c9043f1f0c7a8b819bf9" kindref="member">setTarget</ref>(port,<sp/>0,<sp/>5000);<sp/><sp/><sp/></highlight><highlight class="comment">/**Setfunktionen<sp/>auf<sp/>dem<sp/>Channel<sp/>0<sp/>mit<sp/>der<sp/>Position<sp/>5000*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Roboter.setMultipleTargets(port,<sp/>3,<sp/>0,<sp/>target);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">BOOL<sp/>setposition(HANDLE<sp/>port,unsigned<sp/>char<sp/>channel,unsigned<sp/>short<sp/>target){</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>IPololu<sp/>setposi;</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/>DWORD<sp/>bytesTransferred;<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">BOOL<sp/>setMultiple(HANDLE<sp/>port,unsigned<sp/>char<sp/>numberoftargets,<sp/>unsigned<sp/>char<sp/>channel,<sp/>unsigned<sp/>short<sp/>target)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>IPololu<sp/>multi;</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>DWORD<sp/>bytesTransferred;</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/>//WriteFile(port,<sp/>multi.setMultipleTargets.serialBytes<sp/>,<sp/>sizeof(multi.setMultipleTargets.serialBytes),<sp/>&amp;bytesTransferred,<sp/>NULL);</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"></highlight></codeline>
+<codeline lineno="112"><highlight class="comment"></highlight></codeline>
+<codeline lineno="113"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">BOOL<sp/>setspeed(HANDLE<sp/>port,<sp/>unsigned<sp/>char<sp/>channel,<sp/>unsigned<sp/>short<sp/>speed)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/>IPololu<sp/>Tempo;</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/>DWORD<sp/>bytesTransferred;</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/>//WriteFile(port,<sp/>Tempo.setSpeed.command,<sp/>sizeof(Tempo.setSpeed.command),<sp/>&amp;bytesTransferred,<sp/>NULL);</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"></highlight></codeline>
+<codeline lineno="120"><highlight class="comment">BOOL<sp/>Getposition(HANDLE<sp/>port,<sp/>unsigned<sp/>char<sp/>channel,<sp/>unsigned<sp/>short<sp/>*<sp/>position)</highlight></codeline>
+<codeline lineno="121"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/>IPololu<sp/>Posi;</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>DWORD<sp/>bytesTransferred;</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/>//WriteFile(port,<sp/>Posi.getPosition.command,<sp/>sizeof(Posi.getPosition.command),<sp/>&amp;bytesTransferred,<sp/>NULL);</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/>//ReadFile(port,<sp/>Posi.getPosition.response,<sp/>sizeof(Posi.getPosition.response),<sp/>&amp;bytesTransferred,NULL);</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">BOOL<sp/>getmoving(HANDLE<sp/>port)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/>IPololu<sp/>move;</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/>DWORD<sp/>bytesTransferred;</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>//WriteFile(port,<sp/>move.getmovingstate.command,<sp/>sizeof(move.getmovingstate.command),<sp/>&amp;bytesTransferred,<sp/>NULL);</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"></highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/>//ReadFile(port,<sp/>move.getmovingstate.response,<sp/>sizeof(move.getmovingstate.response),<sp/>&amp;bytesTransferred,<sp/>NULL);</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">}*/</highlight></codeline>
+    </programlisting>
+    <location file="ISerialCom.cpp"/>
+  </compounddef>
+</doxygen>
